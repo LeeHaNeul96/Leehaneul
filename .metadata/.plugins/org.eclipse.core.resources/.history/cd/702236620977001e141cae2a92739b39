@@ -1,0 +1,21 @@
+package com.example.introduce.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.introduce.mapper.IntroduceMapper;
+import com.example.introduce.vo.IntroduceVO;
+
+@Service
+public class IntroduceService {
+	
+	@Autowired
+	private IntroduceMapper mapper;
+	
+	public IntroduceVO view() {
+		
+		System.out.println("view - 내정보 실행 ");
+		return mapper.view();
+	}
+
+}

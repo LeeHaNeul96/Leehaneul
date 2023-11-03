@@ -1,0 +1,9 @@
+package com.example.introduce.service;
+
+import com.example.introduce.vo.IntroduceVO;
+
+public interface IntroduceService {
+	
+	public IntroduceVO view();
+
+}

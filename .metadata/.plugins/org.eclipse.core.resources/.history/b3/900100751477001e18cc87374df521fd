@@ -1,0 +1,15 @@
+package com.example.introduce.vo;
+
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Data
+public class IntroduceVO {
+	
+	public String name,birth,email,stack,completion,languages,completionDate;
+	
+
+}

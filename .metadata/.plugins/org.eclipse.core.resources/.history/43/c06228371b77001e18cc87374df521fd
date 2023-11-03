@@ -1,0 +1,138 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>메인테스트 </title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+.underline-btn{
+text-align: center;
+  display: inline-block;
+    padding: 1em 0;
+    border-radius: 0;
+  color: black;
+    margin-top:2rem;
+    font-weight: bold;
+    font-size: 0.678rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+  position: absolute;
+  &:before,
+  &:after{
+    content: '';
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 0;
+
+  }
+  &:before{
+    transition: width 0s ease,background .4s ease;
+    left: 0;
+    right: 0;
+      bottom: 6px;
+  }
+  &:after{
+    right: 2.2%;
+      bottom: 6px;
+      background: #b2876f;
+    transition: width .4s ease;
+  }
+  
+  &:hover{
+    &:before{
+      width: 97.8%;
+      background: #b2876f;
+        transition: width .4s ease;
+    }
+    &:after{
+      width: 97.8%;
+        background: 0 0;
+      transition: all 0s ease;
+    }
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<div class="content" style="display: none;">
+<h2 style="text-align: center;">
+안녕하세요? <br>
+유연한 사고와 소통을 중시하는 개발자 <br>
+이하늘의 개인 사이트 명함입니다.
+</h2>
+
+<a class="underline-btn" href="#">Draw Underline</a>
+<br>
+</div>
+
+
+
+
+    <div class="typing-demo">
+      Developer Lee Ha Neul.
+    </div>
+</div>
+
+
+
+
+<!-- 오프닝 타이핑 이벤트  -->
+<script>
+$(document).ready(function() {
+  // 텍스트가 모두 출력된 후 1초 뒤에 실행
+  setTimeout(function() {
+    // wrapper 내용을 페이드인 처리
+    $(".content").fadeIn(1000);
+  }, 5000); // 1초(1000 밀리초) 대기 후 실행
+});
+</script>
+<script>
+    // jQuery를 사용하여 텍스트가 모두 출력된 후 1초 뒤에 텍스트를 페이드아웃하고 요소를 제거
+    $(document).ready(function() {
+      // 텍스트가 모두 출력된 후 1초 뒤에 실행
+      setTimeout(function() {
+        $(".typing-demo").fadeOut(1000, function() {
+          $(this).remove(); // 페이드아웃 후 요소를 제거
+        });
+      }, 4000); // 1초(1000 밀리초) 대기 후 실행
+    });
+  </script>
+  <!-- 타이핑 이벤트 끝  -->
+
+</body>
+</html>

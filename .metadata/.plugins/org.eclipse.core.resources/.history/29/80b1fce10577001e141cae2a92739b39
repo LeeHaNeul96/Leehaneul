@@ -1,0 +1,11 @@
+package com.example.introduce.vo;
+
+import lombok.Data;
+
+@Data
+public class IntroduceVO {
+	
+	String name,birth,email,stack,completion,languages;
+	
+
+}

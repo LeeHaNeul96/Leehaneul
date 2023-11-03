@@ -1,0 +1,7 @@
+package com.example.introduce.service;
+
+public interface IntroduceService {
+	
+	public IntroduceVO view();
+
+}

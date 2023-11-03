@@ -1,0 +1,10 @@
+package com.example.introduce.vo;
+
+import lombok.Data;
+
+@Data
+public class IntroduceVO {
+	
+	
+
+}

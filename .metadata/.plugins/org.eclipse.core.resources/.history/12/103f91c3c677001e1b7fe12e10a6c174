@@ -1,0 +1,135 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style type="text/css">
+.footer {
+	text-align: center;
+	padding: 2em 0;
+	background-color: #333;
+	color: #fff;
+	position: fixed;
+	bottom: 0;
+	left: 0; /* 왼쪽 위치를 0으로 설정합니다. */
+	height: 15px;
+	width: 100%;
+	margin: 0; /* 마진을 0으로 설정합니다. */
+}
+
+.footer-dev {
+	font-size: 12px;
+	text-align: left;
+	padding-left: 7em;
+}
+
+.footer-content {
+	position: absolute; /* 절대 위치 설정 */
+	top: 1em; /* 위쪽으로 1em 이동 */
+	padding: 1em 8em; /* 양 옆 여백을 설정합니다. */
+	height: 200px;
+}
+
+.container{
+margin-top: 3em;
+margin-bottom: 10em;
+
+text-align: center;
+
+
+}
+.left-margin {
+ background-color: rgba(0, 0, 0, 0.7); /* 알파 값을 조절하여 투명도 설정 */
+
+    height: 100%;
+    width: 200px; /* 원하는 너비로 조절하세요. */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* 오른쪽 여백 스타일 */
+.right-margin {
+ background-color: rgba(0, 0, 0, 0.7); /* 알파 값을 조절하여 투명도 설정 */
+    height: 100%;
+    width: 200px; /* 원하는 너비로 조절하세요. */
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+h2 {
+    font-size: 36px; /* 예를 들어, 원하는 크기로 설정 */
+    transition: font-size 1s; /* 글씨 크기 변경에 애니메이션 적용 (선택사항) */
+}
+</style>
+</head>
+<body>
+<script>
+$(function() {
+    // 모든 h2 태그를 선택하여 배열로 저장합니다.
+    var $h2Elements = $("h2");
+    
+    // 초기에 모든 h2 태그의 크기를 설정합니다.
+    $h2Elements.css("font-size", "36px");
+
+    // 1초(1000 밀리초)마다 h2 태그 배열을 순회하면서 글꼴 크기를 작게 설정합니다.
+    var index = 0;
+    var interval = setInterval(function() {
+        if (index < $h2Elements.length) {
+            $h2Elements.eq(index).css("font-size", "25px");
+            index++;
+        } else {
+            clearInterval(interval); // 모든 h2 태그를 처리하면 setInterval을 멈춥니다.
+        }
+    }, 50); // 1초마다 실행
+});
+</script>
+
+
+<div class="left-margin"></div>
+<div class="right-margin"></div>
+
+<a href="/main/view"><img style="width:30px; text-align:left; margin-left:15em; margin-top: 3em; margin-bottom: -4em;" alt="" src="/images/free-icon-go-back-left-arrow-61022.png"></a>
+<div class="container">
+<h2>李 하늘</h2><br>
+<h2>1996.06.02</h2><br>
+<h2>예원예술 대학교 연극영화 졸업 (4년제)</h2><br>
+<h2>hn104m@naver.com</h2><br>
+<h2>JAVA</h2><br>
+<h2>JavaScript  Jquery  myBatis  OracleDB</h2><br>
+<h2>2023-06 ~ 2023-07 :: ServletProject 반려동물 커뮤니티 'Animal Lover' : Member - 회원관리<br>
+2023-08 ~ 2023-09 :: SpringProject 종합 신발 쇼핑몰 'Shoepin' : WishList,Cart - 장바구니<br>
+2023-09 AWS기반 Spring 백엔드 개발 수료 
+</h2>
+
+</div>
+
+
+
+	<div class="footer">
+		<div class="footer-dev">
+			개발환경
+			<div class="footer-content">
+				OS : MacOS sonoma14.1
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				server S/W : tomcat
+				9.0v&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				frameWork : JDK17&nbsp;,&nbsp;Spring Boot&nbsp;, &nbsp;JSP
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				database : OracleDB&nbsp;,&nbsp;(Doker desktop)
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Web Browser : Chrome Browser<br> stack :&nbsp;&nbsp;&nbsp;
+				javascript&nbsp;,&nbsp; jquery&nbsp;,&nbsp;mybatis&nbsp;,&nbsp;Ajax
+			</div>
+		</div>
+	</div>
+</body>
+</html>
