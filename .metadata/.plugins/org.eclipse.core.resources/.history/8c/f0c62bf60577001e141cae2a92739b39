@@ -1,5 +1,0 @@
-package com.example.introduce.mapper;
-
-public interface IntrodeuceMapper {
-
-}

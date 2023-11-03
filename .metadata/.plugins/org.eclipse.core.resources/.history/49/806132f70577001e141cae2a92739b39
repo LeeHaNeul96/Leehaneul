@@ -1,9 +1,0 @@
-package com.example.introduce.mapper;
-
-import org.springframework.stereotype.Repository;
-
-@Repository
-@Mapper
-public interface IntrodeuceMapper {
-
-}

@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+/Users/ihaneul/Documents/sts4.2/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-3898490901.index
-2980980651.index
-28195778.index
-3351077243.index
-2971320465.index
-2030932234.index
-2350400024.index
